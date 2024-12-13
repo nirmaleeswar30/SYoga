@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultural Programs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .program-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+        .program-card:hover::before {
+            opacity: 0.95;
+        }
+        .program-content {
+            transform: translateY(60px);
+            transition: transform 0.3s ease;
+        }
+        .program-card:hover .program-content {
+            transform: translateY(0);
+        }
+        .program-description {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .program-card:hover .program-description {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-b from-purple-50 to-white min-h-screen">
+    <div class="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
+        <!-- Header Section -->
+        <div class="text-center mb-16">
+            <p class="text-base font-semibold text-purple-600 tracking-wide uppercase">
+                CULTURAL PROGRAMS
+            </p>
+            <h1 class="mt-2 text-4xl font-bold text-gray-900 sm:text-5xl lg:text-6xl">
+                Cultivating mental, physical and<br>spiritual growth
+            </h1>
+            <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
+                Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.
+            </p>
+        </div>
+
+        <!-- Programs Grid -->
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+            <!-- Ceremonies Card -->
+            <div class="program-card relative h-96 rounded-xl overflow-hidden cursor-pointer">
+                <img 
+                    src="https://images.unsplash.com/photo-1594663582551-5dce069f0b0b?auto=format&fit=crop&q=80" 
+                    alt="Ceremonies" 
+                    class="absolute inset-0 w-full h-full object-cover"
+                >
+                <div class="program-content absolute inset-x-0 bottom-0 p-6 text-white">
+                    <h3 class="text-2xl font-bold mb-2">Ceremonies</h3>
+                    <p class="program-description text-sm leading-relaxed">
+                        Sacred rituals and traditional ceremonies to honor life's important moments. Experience the depth of ancient practices in a modern context.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Healing Card -->
+            <div class="program-card relative h-96 rounded-xl overflow-hidden cursor-pointer">
+                <img 
+                    src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&q=80" 
+                    alt="Healing" 
+                    class="absolute inset-0 w-full h-full object-cover"
+                >
+                <div class="program-content absolute inset-x-0 bottom-0 p-6 text-white">
+                    <h3 class="text-2xl font-bold mb-2">Healing</h3>
+                    <p class="program-description text-sm leading-relaxed">
+                        Holistic healing practices combining ancient wisdom with modern techniques. Discover the path to wholeness and well-being.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Counseling Card -->
+            <div class="program-card relative h-96 rounded-xl overflow-hidden cursor-pointer">
+                <img 
+                    src="https://images.unsplash.com/photo-1609139003551-ee5552a8c095?auto=format&fit=crop&q=80" 
+                    alt="Counseling" 
+                    class="absolute inset-0 w-full h-full object-cover"
+                >
+                <div class="program-content absolute inset-x-0 bottom-0 p-6 text-white">
+                    <h3 class="text-2xl font-bold mb-2">Counseling</h3>
+                    <p class="program-description text-sm leading-relaxed">
+                        Compassionate guidance for mental and spiritual well-being. Find clarity and peace through professional support.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Button -->
+        <div class="text-center mt-12">
+            <button class="bg-purple-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-purple-700 transform hover:scale-105 transition-all duration-300">
+                OTHER PROGRAMS
+            </button>
+        </div>
+    </div>
+</body>
+</html>
