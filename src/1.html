@@ -236,10 +236,10 @@
                     <div class="hidden w-full md:block md:w-auto" id="navbar-multi-level">
                         <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
                             <li>
-                                <a href="#" class="block py-2 px-3 text-red-700 rounded md:bg-transparent md:text-red-500 md:p-0" aria-current="page">Home</a>
+                                <a href="#" class="block py-2 px-3 text-white rounded md:bg-transparent md:text-yellow-300 md:p-0" aria-current="page">Home</a>
                             </li>
                             <li>
-                                <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 md:w-auto">Resources 
+                                <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-white hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-yellow-300 md:p-0 md:w-auto">Resources 
                                     <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
                                     </svg>
@@ -247,6 +247,9 @@
                                 <!-- Dropdown menu -->
                                 <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
                                     <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Books</a>
+                                        </li>
                                         <li>
                                             <a href="#" class="block px-4 py-2 hover:bg-gray-100">Speeches</a>
                                         </li>
@@ -257,18 +260,21 @@
                                         <li>
                                             <a href="#" class="block px-4 py-2 hover:bg-gray-100">Photos</a>
                                         </li>
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Sahaj Miracles</a>
+                                        </li>
                                     </ul>
                                     
                                 </div>
                             </li>
                             <li>
-                                <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0">Schedule</a>
+                                <a href="#" class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-yellow-300 md:p-0">Schedule</a>
                             </li>
                             <li>
-                                <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0">Our Centers</a>
+                                <a href="#" class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-yellow-300 md:p-0">Our Centers</a>
                             </li>
                             <li>
-                                <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0">Contact</a>
+                                <a href="#" class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-yellow-300 md:p-0">Contact</a>
                             </li>
                         </ul>
                     </div>
@@ -602,6 +608,25 @@
                 <div class="container max-w-5xl mx-auto">
                     <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
                         <!-- Existing donations content -->
+                        <div class="mt-12 md:mt-0">
+                            <img src="https://images.unsplash.com/photo-1531973576160-7125cd663d86" alt="About Us Image" class="object-cover rounded-lg shadow-md">
+                        </div>
+                        <div class="max-w-lg">
+                            <h1 class="text-red-700 text-3xl text-center font-bold ">Donations</h1>
+                            <hr class="h-1 my-2 bg-red-800 w-full dark:bg-red-700 rounded-md ">
+                            <p class="mt-4 text-gray-600 text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis
+                                eros at lacus feugiat hendrerit sed ut tortor. Suspendisse et magna quis elit efficitur consequat.
+                                Mauris eleifend velit a pretium iaculis.</p>
+            
+                                <div class="mt-6 py-3 border-red-600">
+                                    <input type="number" placeholder=" ₹ 0.00" class="border-gray-500 focus:ring-red-500 focus:border-red-500 rounded-md">
+                                </div>
+                                  <div>
+                                    <button class="mt-4 px-6 py-2 bg-red-700 text-white font-semibold rounded-lg shadow-lg hover:bg-red-800 focus:outline-none focus:ring-2 focus:ring-red-300">
+                                        Donate
+                                      </button>
+                                  </div>                                
+                        </div>
                     </div>
                 </div>
             </section>
@@ -610,6 +635,72 @@
             <section class="section-padding">
                 <div class="container max-w-5xl mx-auto">
                     <!-- Existing programs content with improved responsive classes -->
+                    <div class="text-center mb-16">
+                        <p class="text-base font-semibold text-red-600 tracking-wide uppercase">
+                            CULTURAL PROGRAMS
+                        </p>
+                        <h1 class="mt-2 text-4xl font-bold text-gray-900 sm:text-5xl lg:text-6xl">
+                            Cultivating mental, physical and<br>spiritual growth
+                        </h1>
+                        <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
+                            Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.
+                        </p>
+                    </div>
+            
+                    <!-- Programs Grid -->
+                    <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+                        <!-- Ceremonies Card -->
+                        <div class="program-card relative h-96 rounded-xl overflow-hidden cursor-pointer">
+                            <img 
+                                src="https://res.cloudinary.com/dr8g09icb/image/upload/v1722277975/lucydavidstaringmoon_riyqgj.jpg" 
+                                alt="Ceremonies" 
+                                class="absolute inset-0 w-full h-full object-cover"
+                            >
+                            <div class="program-content absolute inset-x-0 bottom-0 p-6 text-white">
+                                <h3 class="text-2xl font-bold mb-2">Ceremonies</h3>
+                                <p class="program-description text-sm leading-relaxed">
+                                    Sacred rituals and traditional ceremonies to honor life's important moments. Experience the depth of ancient practices in a modern context.
+                                </p>
+                            </div>
+                        </div>
+            
+                        <!-- Healing Card -->
+                        <div class="program-card relative h-96 rounded-xl overflow-hidden cursor-pointer">
+                            <img 
+                                src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&q=80" 
+                                alt="Healing" 
+                                class="absolute inset-0 w-full h-full object-cover"
+                            >
+                            <div class="program-content absolute inset-x-0 bottom-0 p-6 text-white">
+                                <h3 class="text-2xl font-bold mb-2">Healing</h3>
+                                <p class="program-description text-sm leading-relaxed">
+                                    Holistic healing practices combining ancient wisdom with modern techniques. Discover the path to wholeness and well-being.
+                                </p>
+                            </div>
+                        </div>
+            
+                        <!-- Counseling Card -->
+                        <div class="program-card relative h-96 rounded-xl overflow-hidden cursor-pointer">
+                            <img 
+                                src="https://images.unsplash.com/photo-1731323036230-fb37b4d9ed71?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                                alt="Counseling" 
+                                class="absolute inset-0 w-full h-full object-cover"
+                            >
+                            <div class="program-content absolute inset-x-0 bottom-0 p-6 text-white">
+                                <h3 class="text-2xl font-bold mb-2">Counseling</h3>
+                                <p class="program-description text-sm leading-relaxed">
+                                    Compassionate guidance for mental and spiritual well-being. Find clarity and peace through professional support.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- CTA Button -->
+                    <div class="text-center mt-12">
+                        <button class="bg-red-700 text-white px-8 py-3 rounded-full font-semibold hover:bg-red-700 transform hover:scale-105 transition-all duration-300">
+                            OTHER PROGRAMS
+                        </button>
+                    </div>
                 </div>
             </section>
         </main>
@@ -620,9 +711,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- Keep existing scripts -->
-     
-
-
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         // Preloader animation
@@ -640,6 +729,21 @@
                 }, 500);
             }, 500);
         });
+    </script>
+    
+    <script>
+        // Function to toggle the visibility of event lists based on the selected month
+        function toggleEvents(month) {
+            const months = ['May', 'June', 'July'];
+            months.forEach(m => {
+                const eventList = document.getElementById(m);
+                if (m === month) {
+                    eventList.classList.remove('hidden');
+                } else {
+                    eventList.classList.add('hidden');
+                }
+            });
+        }
     </script>
 </body>
 </html>
