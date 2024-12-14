@@ -35,13 +35,116 @@
         .program-card:hover .program-description {
             opacity: 1;
         }
+        
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ffffff;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .loading_wrap {
+            text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .welcome-text {
+            font-size: 2.5rem;
+            color: #e94444;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .website-text {
+            font-size: 2rem;
+            color: #ff7f50;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s forwards;
+        }
+
+        .fade-out {
+            animation: fadeOut 0.5s forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            to {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+        }
+    
     </style>
 </head>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 <script src="https://cdn.tailwindcss.com"></script>
 <body>
+    <!-- Preloader -->
+    <div id="preloader" class="fixed inset-0 z-50 flex items-center justify-center bg-white">
+        <div class="relative isolate px-6 pt-14 lg:px-8 w-full h-full">
+            <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
+                <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#f11b1b] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+            </div>
+            
+            <div class="flex flex-col items-center justify-center h-full text-center">
+                <img src="https://res.cloudinary.com/dr8g09icb/image/upload/v1734176348/photo_aizcw9.png" class="w-1/5 h-auto mb-8" alt="logo">
+                <div class="text-4xl font-bold text-red-700">
+                    Welcome to Sahaja Yoga Meditation Tamil Nadu
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        // Preloader animation
+        $(window).on('load', function() {
+            setTimeout(function() {
+                $('.loading_wrap').addClass('fade-in');
+                setTimeout(function() {
+                    $('.welcome-text').addClass('fade-in');
+                    setTimeout(function() {
+                        $('#preloader').addClass('fade-out');
+                        setTimeout(function() {
+                            $('#preloader').hide();
+                        }, 500);
+                    }, 2000);
+                }, 500);
+            }, 500);
+        });
+    </script>
     <div class="bg-white">
-        <header class="absolute inset-x-0 top-0 z-50">
+        <header class="absolute inset-x-0 top-0 z-50 bg-red-800">
        
 
             <nav class=" border-gray-200">
@@ -70,13 +173,13 @@
             
                         <!-- Language Dropdown -->
                         <div class="relative">
-                            <button type="button" data-dropdown-toggle="language-dropdown" class="inline-flex items-center font-medium justify-center px-3 py-2 text-sm text-gray-900 rounded-lg cursor-pointer hover:bg-gray-100">
+                            <button type="button" data-dropdown-toggle="language-dropdown" class="inline-flex items-center font-medium justify-center px-3 py-2 text-sm text-white rounded-lg cursor-pointer hover:bg-white hover:text-black">
                                 <svg class="w-5 h-5 rounded-full me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 3900 3900">
                                     <path fill="#b22234" d="M0 0h7410v3900H0z"/>
                                     <path d="M0 450h7410m0 600H0m0 600h7410m0 600H0m0 600h7410m0 600H0" stroke="#fff" stroke-width="300"/>
                                     <path fill="#3c3b6e" d="M0 0h2964v2100H0z"/>
                                 </svg>
-                                EN
+                                English
                             </button>
                             
                             <!-- Dropdown Menu -->
@@ -98,7 +201,7 @@
                                                 <svg class="h-3.5 w-3.5 rounded-full me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                                     <!-- German Flag SVG -->
                                                 </svg>
-                                                Deutsch
+                                                Tamil
                                             </div>
                                         </a>
                                     </li>
@@ -255,7 +358,7 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
                         <div class="max-w-lg">
                             <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl" style="font-family: 'Kalam', cursive;">WELCOME TO SAHAJA YOGA</h2>
-                            <p class="mt-4 text-gray-600 text-lg">Sahaja Yoga teaches a unique method of meditation, rooted in ancient spiritual knowledge. You can achieve a state of balance in just 10 minutes. Continue with free meditation classes.</p>
+                            <p class="mt-4 text-gray-600 text-lg">The time has come for all of you to get your self-realisation, by which your attention becomes enlightened, your health gets completely all right, your mental processes are sensible, but above all you stand in your present.</p>
                             <div class="mt-8">
                                 <a href="#" class="text-red-500 hover:text-red-600 font-medium">Learn more about us
                                     <span class="ml-2">&#8594;</span></a>
@@ -304,7 +407,7 @@
                       </div>
                       <h3 class="text-xl font-semibold mb-4">Everyone Needs Meditation</h3>
                       <p class="text-gray-600">
-                        Today all of humanity is shaken up and going through unprecedented times. Taking care of personal health has never been so crucial.
+                        Today the humanity is shaken up and going through unprecedented imbalances. Sahaja Yoga gives the solution
                       </p>
                     </div>
               
@@ -316,7 +419,7 @@
                   </div>
                   <h3 class="text-xl font-semibold mb-4">Sahaja Yoga is Transformational</h3>
                   <p class="text-gray-600">
-                    Sahaja Yoga begins with an experience that is effortless and spontaneous. With this very first experience, you gain a new dimension in your awareness.
+                    Sahaja Yoga gives instant experience in hands, fingers and human body which is effortless and spontaneous. With this experience, you gain a new dimension in your lifestyle.
                   </p>
                 </div>
               
@@ -328,7 +431,7 @@
                   </div>
                   <h3 class="text-xl font-semibold mb-4">Unlock <br>The Benefits Today</h3>
                   <p class="text-gray-600">
-                    Once you start meditating regularly, you can tap into stress reduction, improved memory, and spiritual awareness. Get started today!
+                    Sahaj Meditation makes you know thyself. You will experience stress reduction, enhanced concentration, improved memory and spiritual growth. Get started today!
                   </p>
                 </div>
                 
@@ -360,7 +463,7 @@
                         
                         <div class="max-w pl-14">
                             <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl text-center" style="font-family: 'Kalam', cursive;">SAHAJA YOGA</h2>
-                            <p class="mt-4 text-gray-600 text-lg">Sahaja Yoga is a unique meditation practice founded by Shri Mataji Nirmala Devi in 1970, designed to help individuals experience self-realization and inner peace. This approach to meditation centers around awakening the Kundalini, a dormant spiritual energy at the base of the spine, which, when gently awakened, rises through the body's energy centers or chakras. Sahaja Yoga is simple, accessible, and can be practiced by anyone, regardless of background, belief, or experience. Sahaja Yoga enables practitioners to experience a profound connection with their inner self, fostering qualities like peace, balance, and joy. Practitioners can experience the benefits of Sahaja Yoga through free classes offered worldwide, which provide a welcoming space for individual growth and collective meditation.</p>
+                            <p class="mt-4 text-gray-600 text-lg">Sahaja Yoga is a simple meditation practice that nurtures an evolved spiritual personality through the awakening of the Kundalini, a process known as Self-Realization. Discovered by H.H. Shri Mataji Nirmala Devi in 1970, this awakening fulfills the universal goal shared by all religions. While the knowledge of Kundalini is ancient, it was historically kept secret and passed only from guru to disciple, as achieving Self-Realization was once extremely challenging. Shri Mataji made a breakthrough by connecting our Kundalini with the Spirit (Atma), through Self-Realization accessible to all humans for the first time in the history. This process brings physical, mental, and emotional balance as a natural outcome of Sahaja Yoga meditation. Self-Realization is the birthright of every human being, now made available to all at free of cost worldwide.</p>
                         </div>
                         
                     </div>

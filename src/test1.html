@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link href="./output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Sahaja Yoga</title>
+    <style>
+        /* Preloader Styles */
+        .custom-preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ffffff;
+            z-index: 50;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .custom-loading-wrap {
+            text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.5s forwards;
+        }
+
+        .custom-welcome-text {
+            font-size: 1.875rem;
+            color: #e94444;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Overriding Tailwind conflicting classes */
+        .custom-hide {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="custom-preloader" id="preloader">
+        <div class="custom-loading-wrap">
+            <img src="img/photo.png" alt="logo" class="w-20 h-auto mb-5">
+            <div class="custom-welcome-text">Welcome to Sahaja Yoga Meditation Tamil Nadu</div>
+        </div>
+    </div>
+
+    <div class="bg-white">
+        <header class="absolute inset-x-0 top-0 z-50 bg-red-800">
+            <nav class=" border-gray-200">
+                <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                    <a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
+                        <img src="https://res.cloudinary.com/dr8g09icb/image/upload/v1734067555/logo_vualnj.png" class="h-8" alt="Logo" />
+                    </a>
+                    <button data-collapse-toggle="navbar-multi-level" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-multi-level" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                        </svg>
+                    </button>
+                    
+                    <div class="flex items-center md:order-2 space-x-2">
+                        <!-- Search Section -->
+                        <div class="relative hidden md:block mr-4">
+                            <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                                <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                                </svg>
+                                <span class="sr-only">Search icon</span>
+                            </div>
+                            <input type="text" id="search-navbar" class="block w-64 p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-red-500 focus:border-red-500" placeholder="Search...">
+                        </div>
+            
+                        <!-- Language Dropdown -->
+                        <div class="relative">
+                            <button type="button" data-dropdown-toggle="language-dropdown" class="inline-flex items-center font-medium justify-center px-3 py-2 text-sm text-white rounded-lg cursor-pointer hover:bg-white hover:text-black">
+                                <svg class="w-5 h-5 rounded-full me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 3900 3900">
+                                    <path fill="#b22234" d="M0 0h7410v3900H0z"/>
+                                    <path d="M0 450h7410m0 600H0m0 600h7410m0 600H0m0 600h7410m0 600H0" stroke="#fff" stroke-width="300"/>
+                                    <path fill="#3c3b6e" d="M0 0h2964v2100H0z"/>
+                                </svg>
+                                English
+                            </button>
+                            
+                            <!-- Dropdown Menu -->
+                            <div id="language-dropdown" class="z-10 hidden absolute right-0 mt-2 bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
+                                <ul class="py-2 text-sm text-gray-700">
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">
+                                            <div class="inline-flex items-center">
+                                                <svg class="h-3.5 w-3.5 rounded-full me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                    <!-- US Flag SVG -->
+                                                </svg>
+                                                English (US)
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">
+                                            <div class="inline-flex items-center">
+                                                <svg class="h-3.5 w-3.5 rounded-full me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                    <!-- German Flag SVG -->
+                                                </svg>
+                                                Tamil
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="hidden w-full md:block md:w-auto" id="navbar-multi-level">
+                        <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
+                            <li>
+                                <a href="#" class="block py-2 px-3 text-red-700 rounded md:bg-transparent md:text-red-500 md:p-0" aria-current="page">Home</a>
+                            </li>
+                            <li>
+                                <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 md:w-auto">Resources 
+                                    <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                                    </svg>
+                                </button>
+                                <!-- Dropdown menu -->
+                                <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
+                                    <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Speeches</a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Bhajans</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Photos</a>
+                                        </li>
+                                    </ul>
+                                    
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0">Schedule</a>
+                            </li>
+                            <li>
+                                <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0">Our Centers</a>
+                            </li>
+                            <li>
+                                <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+        </header>
+
+        <div class="relative isolate px-6 pt-14 lg:px-8">
+            <!-- Your existing content here -->
+        </div>
+    </div>
+
+    <script>
+        // Preloader animation
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            preloader.classList.add('custom-hide');
+        });
+    </script>
+</body>
+</html>

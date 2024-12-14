@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link href="./output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Sahaja Yoga</title>
+    <style>
+        /* Existing styles */
+        .program-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+        .program-card:hover::before {
+            opacity: 0.95;
+        }
+        .program-content {
+            transform: translateY(60px);
+            transition: transform 0.3s ease;
+        }
+        .program-card:hover .program-content {
+            transform: translateY(0);
+        }
+        .program-description {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .program-card:hover .program-description {
+            opacity: 1;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .grid-cols-2 {
+                grid-template-columns: 1fr !important;
+            }
+            
+            .mx-36 {
+                margin-left: 1rem;
+                margin-right: 1rem;
+            }
+            
+            .event-list .flex {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .event-list .w-32,
+            .event-list .w-48 {
+                width: 100%;
+            }
+            
+            .event-list .gap-16 {
+                gap: 1rem;
+            }
+            
+            .program-card {
+                height: 300px;
+            }
+            
+            .text-5xl {
+                font-size: 2rem;
+            }
+            
+            .text-4xl {
+                font-size: 1.75rem;
+            }
+        }
+
+        /* Additional responsive improvements */
+        @media (max-width: 640px) {
+            .welcome-section {
+                flex-direction: column-reverse;
+            }
+            
+            .welcome-section img {
+                width: 100%;
+                height: auto;
+                margin-top: 2rem;
+            }
+            
+            .donation-section {
+                padding: 2rem 1rem;
+            }
+            
+            .program-grid {
+                gap: 1rem;
+            }
+        }
+
+        /* Navigation improvements */
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 0.5rem;
+            }
+            
+            .search-section {
+                display: none;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+        }
+
+        /* Layout fixes */
+        .section-padding {
+            padding: 4rem 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .section-padding {
+                padding: 6rem 2rem;
+            }
+        }
+
+        /* Image responsiveness */
+        .responsive-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Container width control */
+        .content-wrapper {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .content-wrapper {
+                padding: 0 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Keep existing preloader code -->
+     <!-- Preloader -->
+    <div id="preloader" class="fixed inset-0 z-50 flex items-center justify-center bg-white">
+        <div class="relative isolate px-6 pt-14 lg:px-8 w-full h-full">
+            <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
+                <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#f11b1b] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+            </div>
+            
+            <div class="flex flex-col items-center justify-center h-full text-center">
+                <img src="https://res.cloudinary.com/dr8g09icb/image/upload/v1734176348/photo_aizcw9.png" class="w-1/5 h-auto mb-16 " alt="logo">
+                <div class="text-4xl font-bold text-red-700">
+                    Welcome to Sahaja Yoga Meditation Tamil Nadu
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="bg-white">
+        <!-- Existing header with nav -->
+        <header class="absolute inset-x-0 top-0 z-50 bg-red-800">
+       
+
+            <nav class=" border-gray-200">
+                <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                    <a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
+                        <img src="https://res.cloudinary.com/dr8g09icb/image/upload/v1734067555/logo_vualnj.png" class="h-8" alt="Logo" />
+                    </a>
+                    <button data-collapse-toggle="navbar-multi-level" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-multi-level" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                        </svg>
+                    </button>
+                    
+                    <div class="flex items-center md:order-2 space-x-2">
+                        <!-- Search Section -->
+                        <div class="relative hidden md:block mr-4">
+                            <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                                <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                                </svg>
+                                <span class="sr-only">Search icon</span>
+                            </div>
+                            <input type="text" id="search-navbar" class="block w-64 p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-red-500 focus:border-red-500" placeholder="Search...">
+                        </div>
+            
+                        <!-- Language Dropdown -->
+                        <div class="relative">
+                            <button type="button" data-dropdown-toggle="language-dropdown" class="inline-flex items-center font-medium justify-center px-3 py-2 text-sm text-white rounded-lg cursor-pointer hover:bg-white hover:text-black">
+                                <svg class="w-5 h-5 rounded-full me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 3900 3900">
+                                    <path fill="#b22234" d="M0 0h7410v3900H0z"/>
+                                    <path d="M0 450h7410m0 600H0m0 600h7410m0 600H0m0 600h7410m0 600H0" stroke="#fff" stroke-width="300"/>
+                                    <path fill="#3c3b6e" d="M0 0h2964v2100H0z"/>
+                                </svg>
+                                English
+                            </button>
+                            
+                            <!-- Dropdown Menu -->
+                            <div id="language-dropdown" class="z-10 hidden absolute right-0 mt-2 bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
+                                <ul class="py-2 text-sm text-gray-700">
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">
+                                            <div class="inline-flex items-center">
+                                                <svg class="h-3.5 w-3.5 rounded-full me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                    <!-- US Flag SVG -->
+                                                </svg>
+                                                English (US)
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">
+                                            <div class="inline-flex items-center">
+                                                <svg class="h-3.5 w-3.5 rounded-full me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                    <!-- German Flag SVG -->
+                                                </svg>
+                                                Tamil
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="hidden w-full md:block md:w-auto" id="navbar-multi-level">
+                        <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
+                            <li>
+                                <a href="#" class="block py-2 px-3 text-red-700 rounded md:bg-transparent md:text-red-500 md:p-0" aria-current="page">Home</a>
+                            </li>
+                            <li>
+                                <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 md:w-auto">Resources 
+                                    <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                                    </svg>
+                                </button>
+                                <!-- Dropdown menu -->
+                                <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
+                                    <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Speeches</a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Bhajans</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Photos</a>
+                                        </li>
+                                    </ul>
+                                    
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0">Schedule</a>
+                            </li>
+                            <li>
+                                <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0">Our Centers</a>
+                            </li>
+                            <li>
+                                <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        
+        <main class="content-wrapper">
+            <!-- Welcome Section -->
+            <section class="section-padding welcome-section">
+                <div class="container max-w-5xl mx-auto">
+                    <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+                        <!-- Existing welcome content -->
+                        <div class="max-w-lg">
+                            <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl" style="font-family: 'Kalam', cursive;">WELCOME TO SAHAJA YOGA</h2>
+                            <p class="mt-4 text-gray-600 text-lg">The time has come for all of you to get your self-realisation, by which your attention becomes enlightened, your health gets completely all right, your mental processes are sensible, but above all you stand in your present.</p>
+                            <div class="mt-8">
+                                <!-- <a href="#" class="text-red-500 hover:text-red-600 font-medium">Learn more about us
+                                    <span class="ml-2">&#8594;</span></a> -->
+                                    <h3 class="mt-4 text-2xl font-semibold text-gray-900 " style="font-family: 'Kalam', cursive; text-decoration: underline;">Daily Free Meditation Sessions</h3>
+                            <div>
+                                <div class="flex">
+                                    <p class="mt-3 mr-4 text-gray-600 text-lg">Morning Session:</p>
+                                <button style="width: 90px;" type="button" class="w-44 mt-3 focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-xs px-5 py-2 me-2 mb-2 ">Join</button>
+                                </div>
+                                
+                                <div class="flex">
+                                    <p class="mt-3 mr-4 text-gray-600 text-lg">Evening Session:</p>
+                                <button style="width: 90px;" type="button" class="w-44 mt-3 focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-xs px-5 py-2 me-2 mb-2 ml-1">Join</button>
+                                </div>
+                            </div>
+                            <h3 class="mt-2 text-2xl font-semibold text-gray-900 " style="font-family: 'Kalam', cursive; text-decoration: underline;">For Beginners</h3>
+                            <div class="flex">
+                                <p class="mt-4 mr-4 text-gray-600 text-lg">Evening Session:</p>
+                                <button style="width: 90px;" type="button" class="w-44 mt-4 focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-xs px-5 py-2 me-2 mb-2">Join</button>
+                            </div>
+                            </div>
+                        </div>
+                        <div class=" ml-12 md:mt-0">
+                            <img src="https://i.pinimg.com/originals/3f/4f/7c/3f4f7c788d1c3189918c325bae2af0a0.jpg" alt="About Us Image" class="object-cover rounded-lg  mt-10 ml-24 h-auto w-96">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Features Section -->
+            <section class="section-padding ">
+                <div class="container max-w-5xl mx-auto">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center ">
+                        <!-- Existing feature cards -->
+                         
+              
+                    <!-- Card 1 -->
+                    <div class="bg-white p-6 mt-5">
+                      <div class="mb-4">
+                        <!-- SVG Icon -->
+                        <img class="w-20 h-20 mx-auto " src="https://res.cloudinary.com/dodaypz5o/image/upload/v1734117524/meditation-meditate-mindful-mindfulness-svgrepo-com_crwhqj.svg" alt="" >
+                      </div>
+                      <h3 class="text-3xl font-semibold mb-4">Everyone Needs <br>Meditation</h3>
+                      <p class="text-gray-600 text-xl">
+                        Today the humanity is shaken up and going through unprecedented imbalances. Sahaja Yoga gives the solution
+                      </p>
+                    </div>
+              
+                    <!-- Card 2 -->
+                    <div class="bg-white p-6 ">
+                      <div class="mb-4">
+                        <!-- SVG Icon -->
+                        <img class="w-24 h-24 mx-auto"src="https://res.cloudinary.com/dodaypz5o/image/upload/v1734117151/lotus-svgrepo-com_1_gtcxyp.svg" alt="">
+                  </div>
+                  <h3 class="text-3xl font-semibold mb-4">Sahaja Yoga is Transformational</h3>
+                  <p class="text-gray-600 text-xl ">
+                    Sahaja Yoga gives instant experience in hands, fingers and human body which is effortless and spontaneous. With this experience, you gain a new dimension in your lifestyle.
+                  </p>
+                </div>
+              
+                <!-- Card 3 -->
+                <div class="bg-white p-6">
+                  <div class="mb-4">
+                    <!-- SVG Icon -->
+                    <img class="w-24 h-24 mx-auto"src="https://res.cloudinary.com/dodaypz5o/image/upload/v1734118671/plant-on-a-hand-svgrepo-com_1_hg0g3r.svg" alt="">
+                  </div>
+                  <h3 class="text-3xl font-semibold mb-4">Unlock <br>The Benefits Today</h3>
+                  <p class="text-gray-600 text-xl">
+                    Sahaj Meditation makes you know thyself. You will experience stress reduction, enhanced concentration, improved memory and spiritual growth. Get started today!
+                  </p>
+                </div>
+                
+              </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- About Section -->
+            <section class="section-padding">
+                <div class="container max-w-5xl mx-auto">
+                    <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+                        <!-- Existing about content -->
+                        <div class="relative h-[500px] w-full">
+                            <!-- First Image (Rectangle) moved slightly more to the right -->
+                            <img 
+                                src="https://res.cloudinary.com/dr8g09icb/image/upload/v1722277975/lucydavidstaringmoon_riyqgj.jpg" 
+                                alt="First Image" 
+                                class="absolute top-0 left-1 object-cover rounded-lg shadow-md h-[350px] w-[500px]"
+                            >
+                            <!-- Second Image (Rectangle) -->
+                            <img 
+                                src="https://res.cloudinary.com/dr8g09icb/image/upload/v1722277975/lucydavidstaringmoon_riyqgj.jpg" 
+                                alt="Second Image" 
+                                class="absolute bottom-0 right-1 object-cover rounded-lg shadow-md h-[350px] w-[500px]"
+                            >
+                        </div>
+                        
+                        
+                        
+                        <div class="max-w pl-14">
+                            <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl text-center" style="font-family: 'Kalam', cursive;">SAHAJA YOGA</h2>
+                            <p class="mt-4 text-gray-600 text-lg">Sahaja Yoga is a simple meditation practice that nurtures an evolved spiritual personality through the awakening of the Kundalini, a process known as Self-Realization. Discovered by H.H. Shri Mataji Nirmala Devi in 1970, this awakening fulfills the universal goal shared by all religions. While the knowledge of Kundalini is ancient, it was historically kept secret and passed only from guru to disciple, as achieving Self-Realization was once extremely challenging. Shri Mataji made a breakthrough by connecting our Kundalini with the Spirit (Atma), through Self-Realization accessible to all humans for the first time in the history. This process brings physical, mental, and emotional balance as a natural outcome of Sahaja Yoga meditation. Self-Realization is the birthright of every human being, now made available to all at free of cost worldwide.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Events Section -->
+            <section class="section-padding bg-red-800">
+                <div class="container max-w-5xl mx-auto">
+                    <!-- Existing events content with improved responsive classes -->
+                    <div class="mb-8">
+                        <p class="text-white/80 uppercase tracking-wide text-sm font-medium mb-2">Calendar</p>
+                        <h1 class="text-white text-4xl font-bold">Event Schedule</h1>
+                    </div>
+        
+                    <!-- Month Navigation -->
+                    <div class="flex gap-6 text-white/70 mb-8">
+                        <button class="hover:text-white" onclick="toggleEvents('May')">May 2023</button>
+                        <button class="hover:text-white" onclick="toggleEvents('June')">June 2023</button>
+                        <button class="hover:text-white" onclick="toggleEvents('July')">July 2023</button>
+                    </div>
+        
+                    <!-- Event List for May -->
+                    <div id="May" class="event-list space-y-6">
+                        <ul class="space-y-4">
+                            <!-- Event 1 -->
+                            <li class="flex items-center justify-between border-t border-white/20 pt-8">
+                                <div class="flex gap-16 flex-1">
+                                    <div class="w-32">
+                                        <p class="font-medium text-white">1 May</p>
+                                        <p class="text-white/60 text-sm">12:00 am</p>
+                                    </div>
+                                    <div class="flex-1">
+                                        <p class="text-white font-medium">Yoga Practice</p>
+                                    </div>
+                                    <div class="w-48">
+                                        <p class="text-white">Ashton Porter</p>
+                                        <p class="text-white/60 text-sm">Mentor</p>
+                                    </div>
+                                    <div class="w-48">
+                                        <p class="text-white">New York</p>
+                                        <p class="text-white/60 text-sm">Gita Church</p>
+                                    </div>
+                                </div>
+                                <button class="text-white/60 hover:text-white ml-4">
+                                    <img src="https://res.cloudinary.com/dsobwzsfl/image/upload/v1734106000/arrow-circle-right-svgrepo-com_bj7fdn.svg" 
+                                         alt="Arrow Circle Right Icon" 
+                                         class="h-6 w-6"
+                                         style="filter: invert(1);">
+                                </button>
+                                
+                                
+                            </li>
+        
+                            <!-- Event 2 -->
+                            <li class="flex items-center justify-between border-t border-white/20 pt-8">
+                                <div class="flex gap-16 flex-1">
+                                    <div class="w-32">
+                                        <p class="font-medium text-white">3 May</p>
+                                        <p class="text-white/60 text-sm">9:00 am</p>
+                                    </div>
+                                    <div class="flex-1">
+                                        <p class="text-white font-medium">Meditation</p>
+                                    </div>
+                                    <div class="w-48">
+                                        <p class="text-white">Ben Carter</p>
+                                        <p class="text-white/60 text-sm">Mentor</p>
+                                    </div>
+                                    <div class="w-48">
+                                        <p class="text-white">Chicago</p>
+                                        <p class="text-white/60 text-sm">Gita Church</p>
+                                    </div>
+                                </div>
+                                <button class="text-white/60 hover:text-white ml-4">
+                                    <img src="https://res.cloudinary.com/dsobwzsfl/image/upload/v1734106000/arrow-circle-right-svgrepo-com_bj7fdn.svg" 
+                                         alt="Arrow Circle Right Icon" 
+                                         class="h-6 w-6"
+                                         style="filter: invert(1);">
+                                </button>
+                                
+                            </li>
+        
+                            <!-- Event 3 -->
+                            <li class="flex items-center justify-between border-t border-white/20 pt-8">
+                                <div class="flex gap-16 flex-1">
+                                    <div class="w-32">
+                                        <p class="font-medium text-white">11 May</p>
+                                        <p class="text-white/60 text-sm">6:00 pm</p>
+                                    </div>
+                                    <div class="flex-1">
+                                        <p class="text-white font-medium">Healing</p>
+                                    </div>
+                                    <div class="w-48">
+                                        <p class="text-white">Dylan Byrne</p>
+                                        <p class="text-white/60 text-sm">Mentor</p>
+                                    </div>
+                                    <div class="w-48">
+                                        <p class="text-white">Miami</p>
+                                        <p class="text-white/60 text-sm">Gita Church</p>
+                                    </div>
+                                </div>
+                                <button class="text-white/60 hover:text-white ml-4">
+                                    <img src="https://res.cloudinary.com/dsobwzsfl/image/upload/v1734106000/arrow-circle-right-svgrepo-com_bj7fdn.svg" 
+                                         alt="Arrow Circle Right Icon" 
+                                         class="h-6 w-6"
+                                         style="filter: invert(1);">
+                                </button>
+                                
+                            </li>
+        
+                            <!-- Event 4 -->
+                            <li class="flex items-center justify-between border-t border-white/20 pt-6">
+                                <div class="flex gap-16 flex-1">
+                                    <div class="w-32">
+                                        <p class="font-medium text-white">18 May</p>
+                                        <p class="text-white/60 text-sm">11:00 am</p>
+                                    </div>
+                                    <div class="flex-1">
+                                        <p class="text-white font-medium">Sound Bath</p>
+                                    </div>
+                                    <div class="w-48">
+                                        <p class="text-white">Kate Sykes</p>
+                                        <p class="text-white/60 text-sm">Mentor</p>
+                                    </div>
+                                    <div class="w-48">
+                                        <p class="text-white">New York</p>
+                                        <p class="text-white/60 text-sm">Gita Church</p>
+                                    </div>
+                                </div>
+                                <button class="text-white/60 hover:text-white ml-4">
+                                    <img src="https://res.cloudinary.com/dsobwzsfl/image/upload/v1734106000/arrow-circle-right-svgrepo-com_bj7fdn.svg" 
+                                         alt="Arrow Circle Right Icon" 
+                                         class="h-6 w-6"
+                                         style="filter: invert(1);">
+                                </button>
+                                
+                            </li>
+                        </ul>
+                    </div>
+        
+                    <!-- Event List for June (Initially hidden) -->
+                    <div id="June" class="event-list space-y-6 hidden">
+                        <ul class="space-y-4">
+                            <!-- Event 1 -->
+                            <li class="flex items-center justify-between border-t border-white/20 pt-6">
+                                <div class="flex gap-16 flex-1">
+                                    <div class="w-32">
+                                        <p class="font-medium text-white">3 June</p>
+                                        <p class="text-white/60 text-sm">9:00 am</p>
+                                    </div>
+                                    <div class="flex-1">
+                                        <p class="text-white font-medium">Meditation</p>
+                                    </div>
+                                    <div class="w-48">
+                                        <p class="text-white">Ben Carter</p>
+                                        <p class="text-white/60 text-sm">Mentor</p>
+                                    </div>
+                                    <div class="w-48">
+                                        <p class="text-white">Chicago</p>
+                                        <p class="text-white/60 text-sm">Gita Church</p>
+                                    </div>
+                                </div>
+                                <button class="text-white/60 hover:text-white ml-4">
+                                    <img src="https://res.cloudinary.com/dsobwzsfl/image/upload/v1734106000/arrow-circle-right-svgrepo-com_bj7fdn.svg" 
+                                         alt="Arrow Circle Right Icon" 
+                                         class="h-6 w-6"
+                                         style="filter: invert(1);">
+                                </button>
+                                
+                            </li>
+        
+                            <!-- Additional Events for June (if any) -->
+                            <!-- Repeat the structure for each event -->
+                        </ul>
+                    </div>
+        
+                    <!-- Event List for July (Initially hidden) -->
+                    <div id="July" class="event-list space-y-6 hidden">
+                        <ul class="space-y-4">
+                            <!-- Example Event for July -->
+                            <li class="flex items-center justify-between border-t border-white/20 pt-6">
+                                <div class="flex gap-16 flex-1">
+                                    <div class="w-32">
+                                        <p class="font-medium text-white">5 July</p>
+                                        <p class="text-white/60 text-sm">10:00 am</p>
+                                    </div>
+                                    <div class="flex-1">
+                                        <p class="text-white font-medium">Dance Workshop</p>
+                                    </div>
+                                    <div class="w-48">
+                                        <p class="text-white">Sarah Lee</p>
+                                        <p class="text-white/60 text-sm">Mentor</p>
+                                    </div>
+                                    <div class="w-48">
+                                        <p class="text-white">Los Angeles</p>
+                                        <p class="text-white/60 text-sm">Gita Church</p>
+                                    </div>
+                                </div>
+                                <button class="text-white/60 hover:text-white ml-4">
+                                    <img src="https://res.cloudinary.com/dsobwzsfl/image/upload/v1734106000/arrow-circle-right-svgrepo-com_bj7fdn.svg" 
+                                         alt="Arrow Circle Right Icon" 
+                                         class="h-6 w-6"
+                                         style="filter: invert(1);">
+                                </button>
+                                
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Donations Section -->
+            <section class="section-padding donation-section">
+                <div class="container max-w-5xl mx-auto">
+                    <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+                        <!-- Existing donations content -->
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Programs Section -->
+            <section class="section-padding">
+                <div class="container max-w-5xl mx-auto">
+                    <!-- Existing programs content with improved responsive classes -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Existing scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Keep existing scripts -->
+     
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        // Preloader animation
+        $(window).on('load', function() {
+            setTimeout(function() {
+                $('.loading_wrap').addClass('fade-in');
+                setTimeout(function() {
+                    $('.welcome-text').addClass('fade-in');
+                    setTimeout(function() {
+                        $('#preloader').addClass('fade-out');
+                        setTimeout(function() {
+                            $('#preloader').hide();
+                        }, 500);
+                    }, 2000);
+                }, 500);
+            }, 500);
+        });
+    </script>
+</body>
+</html>
