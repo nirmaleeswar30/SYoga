@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link href="./output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Sahaja Yoga</title>
+    <style>
+        
+
+        /* Navigation improvements */
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 0.5rem;
+            }
+            
+            .search-section {
+                display: none;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+        }
+
+        /* Layout fixes */
+        .section-padding {
+            padding: 4rem 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .section-padding {
+                padding: 6rem 2rem;
+            }
+        }
+
+        
+
+        /* Container width control */
+        .content-wrapper {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .content-wrapper {
+                padding: 0 2rem;
+            }
+        }
+        </style>
+</head>
+<body>
+    <div class="bg-orange-100">
+        <!-- Existing header with nav -->
+        <header class="absolute inset-x-0 top-0 z-50 bg-red-800">
+       
+
+            <nav class=" border-gray-200">
+                <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                    <a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
+                        <img src="https://res.cloudinary.com/dr8g09icb/image/upload/v1734200938/image_2_z4b0ex.png" class="h-8" alt="Logo" />
+                    </a>
+                    <but
+                    ton data-collapse-toggle="navbar-multi-level" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-multi-level" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                        </svg>
+                    </but>
+                    
+                    <div class="flex items-center md:order-2 space-x-2">
+                        <!-- Search Section -->
+                        <div class="relative hidden md:block mr-4">
+                            <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                                <svg class="w-3 h-3 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                                </svg>
+                                <span class="sr-only">Search icon</span>
+                            </div>
+                            <input type="text" id="search-navbar" class="block w-auto p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-red-500 focus:border-red-500" placeholder="Search...">
+                        </div>
+            
+                        <!-- Language Dropdown -->
+                        <div class="relative">
+                            <button type="button" data-dropdown-toggle="language-dropdown" class="inline-flex items-center font-medium justify-center px-3 py-2 text-sm text-white rounded-lg cursor-pointer hover:bg-white hover:text-black">
+                                <svg class="w-5 h-5 rounded-full me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 3900 3900">
+                                    <path fill="#b22234" d="M0 0h7410v3900H0z"/>
+                                    <path d="M0 450h7410m0 600H0m0 600h7410m0 600H0m0 600h7410m0 600H0" stroke="#fff" stroke-width="300"/>
+                                    <path fill="#3c3b6e" d="M0 0h2964v2100H0z"/>
+                                </svg>
+                                English
+                            </button>
+                            
+                            <!-- Dropdown Menu -->
+                            <div id="language-dropdown" class="z-10 hidden absolute right-0 mt-2 bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
+                                <ul class="py-2 text-sm text-gray-700">
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">
+                                            <div class="inline-flex items-center">
+                                                <svg class="h-3.5 w-3.5 rounded-full me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                    <!-- US Flag SVG -->
+                                                </svg>
+                                                English (US)
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">
+                                            <div class="inline-flex items-center">
+                                                <svg class="h-3.5 w-3.5 rounded-full me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                    <!-- German Flag SVG -->
+                                                </svg>
+                                                Tamil
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="hidden w-full md:block md:w-auto" id="navbar-multi-level">
+                        <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
+                            <li>
+                                <a href="#" class="block py-2 px-3 text-white rounded md:bg-transparent md:text-yellow-300 md:p-0" aria-current="page">Home</a>
+                            </li>
+                            
+                            <li>
+                                <a href="#" class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-yellow-300 md:p-0">Schedule</a>
+                            </li>
+                            <li>
+                                <a href="#" class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-yellow-300 md:p-0">7 Chakras & Nadis</a>
+                            </li>
+                            <li>
+                                <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-white hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-yellow-300 md:p-0 md:w-auto">Resources 
+                                    <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                                    </svg>
+                                </button>
+                                <!-- Dropdown menu -->
+                                <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
+                                    <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Books</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Speeches</a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Bhajans</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Photos</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Sahaj Miracles</a>
+                                        </li>
+                                    </ul>
+                                    
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#" class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-yellow-300 md:p-0">Our Centers</a>
+                            </li>
+                            <li>
+                                <a href="#" class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-yellow-300 md:p-0">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="pt-28 pb-12">
+                <!-- Section Heading -->
+    <div class="text-center pb-4">
+        <h1 class="text-4xl font-semibold text-rose-700">Nadis</h1>
+    </div>
+
+    <!-- Main Content Section -->
+    <section class="max-w-6xl mx-auto mt-2 p-6 bg-pink-100 rounded-lg shadow-md">
+        <!-- Navigation Tabs -->
+        <div class="flex justify-center mt-4 space-x-6 border-b-2 border-rose-200 pb-2 font-semibold ">
+            <button id="pingala-tab" class="text-rose-700 font-medium border-b-2 border-rose-700">
+                Pingala Nadi
+            </button>
+            <button id="ida-tab" class="text-gray-600 hover:text-rose-700">
+                Ida Nadi
+            </button>
+            <button id="sushumna-tab" class="text-gray-600 hover:text-rose-700">
+                Sushumna Nadi
+            </button>
+        </div>
+
+        <!-- Content Section -->
+        <div id="content-section" class="mt-6 flex flex-col lg:flex-row items-start">
+            <!-- Left Content -->
+            <div class="flex-1 text-justify">
+                <h2 class="text-2xl font-bold text-rose-700">What is an energy channel (nadi)?</h2>
+                <p class="mt-4 text-gray-800">
+                    The Kundalini travels throughout your body by way of three energy channels, or <em>nadis</em>.
+                    The three nadis are the left channel, the right channel, and the center channel. All three
+                    work perfectly together to integrate and balance the flow of your Kundalini. Each also plays
+                    a specific role in maintaining your emotions, moods, and physical health.
+                </p>
+                <p class="mt-4 text-gray-800">
+                    Each of the chakras is located on all the three channels. As the Kundalini energy rises through
+                    the central channel, it nourishes each chakra, the center, left, and right side of each chakra.
+                    At the 7th or Sahastrara chakra, it achieves a connection with the all-pervading divine energy.
+                    The opening of the Sahastrara chakra thus facilitates the flow of the divine energy through this
+                    opening back into the three nadis nourishing the chakras again.
+                </p>
+                <p class="mt-4 text-gray-800">
+                    All this happens in a split second and nearly instantaneously. Also, the rising of the Kundalini
+                    energy really means that a few strands of the thread-like Kundalini energy rise.
+                </p>
+            </div>
+
+            <!-- Right Image -->
+            <div class="flex-1 mt-6 lg:mt-0 lg:ml-10">
+                <div class="relative">
+                    <img src="https://www.sahajayoga.org.in/new_images/subtle_image.jpg" 
+                         alt="Subtle System" 
+                         class="w-full max-w-md lg:max-w-lg mx-auto rounded-lg shadow-md">
+                    <!-- Replace 'subtle-system-placeholder.png' with the actual image URL or path -->
+                </div>
+            </div>
+        </div>
+    </section>
+        </div>
+
+    <script>
+        // JavaScript for dynamic content handling
+        const contentSection = document.querySelector('#content-section > div:first-child');
+        const tabs = document.querySelectorAll('button');
+
+        const nadiContent = {
+            pingala: `
+                <h2 class="text-2xl font-bold text-rose-700">Pingala Nadi</h2>
+                <p class="mt-4 text-gray-800 text-justify">
+                    Your right energy channel ( Pingala nadi), also called the sun channel, begins at your Swadisthan chakra and travels up the right side of your body, terminating in the ego area of the brain. The ego is the area of your brain that gives you a sense of individualism and self, as distinct from others. It is the ego that allows you to relate to yourself as “me” or “I.” 
+                    </p>
+                    <br>
+                    <p class="text-justify">Action and planning are essential qualities associated with the right energy channel. They drive your mental and physical activities. However, the demand for energy on the right side can sometimes be so great that the left side is weakened. When this occurs, your desire for joy may evaporate, and you find yourself grouchy and irritable.You may even feel like yelling at everyone or “flying off the handle” when the slightest thing goes wrong.  As a result, the negativity, stress and aggression continue to build. Fortunately, awareness is the first step to correcting imbalance.Meditation, and accessing your Kundalini energy to restore harmony, will allow you to do so.</p>
+                    <p>In summary, your right energy channel influences your ability to plan and take action for the future. It also plays a role in negative emotions such as anger, irritability and stress. Your right channel thinks in terms of “I,” “mine,” and “myself.” Overdo any of these and you may become unpleasant to be around. However, your meditation will tell you when your right channel energy is too high and when it’s time to cool down and rebalance.
+                </p>
+            `,
+            ida: `
+                <h2 class="text-2xl font-bold text-rose-700">Ida Nadi</h2>
+                <p class="mt-4 text-gray-800 text-justify">
+                    Your left energy channel (called  Ida nadi in Sanskrit), also known as the moon channel, begins at the Mooladhara chakra and travels up the left side of your body, terminating in the superego area on the right side of your mind-brain. The superego is the storehouse of all your memories, habits and conditionings. Your superego is also the area of your brain that encourages moral behavior. In most of us, it has to wage war on our more selfish, pleasure seeking urges in the process.</p>
+                    <br>
+                    <p class = "text-justify">
+                    Joy is an essential quality associated with the left energy channel. Ideally, it is felt as the innocent joy of a child. Remember when you were a young child and you’d wake up happy every morning? The joy carried by the left energy channel feels just like that. As adults, we long for this joy, though we don’t often find it. It may become blocked or “bruised” by some of our life experiences. However, it still lives within us and can be awakened through meditation.</p>
+                    <br>
+                    <p class="text-justify">
+                    If you have a problem with your left energy channel, you may experience emotional extremes. This includes moods that shift rapidly from elation to depression and back again. You may also experience lethargy and extreme passivity. Most of us have suffered the occasional “couch potato” day.
+                   </p>
+                   <br>
+                   <p class = "text-justify">Remember the lack of energy and desire you felt as you sat around, doing nothing at all? That feeling may have been caused by a problem with your left energy channel.  In summary, your left energy channel influences your emotions, feelings and desires. It is also connected to your memories and past experiences. As long as your emotions stay at normal levels, you’ll do just fine. However, if you’re feeling extremes of emotion such as depression, gloominess and brooding, then it’s time to do something about it. All you need to start clearing your left channel is meditation. Sahaja Yoga techniques are easy, safe and the renewed feelings of joy and energy you’ll experience can be positively addictive.
+                    </p>
+            `,
+            sushumna: `
+                <h2 class="text-2xl font-bold text-rose-700">Sushumna Nadi</h2>
+                <p class="mt-4 text-gray-800 text-justify">
+                    Your central energy channel ( Sushumna nadi), also called the middle path, travels from the sacrum bone at the base of your spine (where your Kundalini energy resides) straight up your spine towards the Sahastrara chakra. Your central energy channel is the channel that aids your spiritual growth.  In fact, we’d say that you’ve been drawn to Sahaja Yoga because of the strength of your central channel.  The central energy channel can be used to help you evolve continuously into an improved personality with an increased focus on the subtler aspects of life. </p>
+                    <br>
+                    <p class = "text-justify">Your entire subtle energy system is integrated in the Sahastrara chakra. As such, it is the most important chakra for spiritual growth and meditation. It is also the chakra in which your Kundalini has the greatest ability to maximize its potential to help you. Clearing obstructions in the central energy channel is a critical component of Sahaja Yoga. When you are constantly in balance, your central channel remains clear. This paves the way for your Kundalini, to rise smoothly to the Sahastrara chakra. When this happens, your own Kundalini unites with the Divine Energy of the universe.  Proper functioning of the central energy channel is crucial to maintaining energy balance. In a way, it represents the very essence of balancing the chakras and the primary goal of meditation.
+                    </p>
+                    <br>
+                    <p class = "text-justify">It may sound complex, but understanding your energy channels is quite simple if you think of them in the following way. You’ll want to use your left and right energy channels to balance your emotions, desires and actions as you live and enjoy your life. At the same time, you’ll want to spend time on the central energy channel so you can continuously improve yourself as a spiritual personality. Keeping all three channels balanced and clear will give you the power to manage your life, and all its challenges, with ease. You’ll also experience and enjoy all of life’s pleasures in a balanced and more meaningful way.</p>
+                
+            `
+        };
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const tabId = tab.id.split('-')[0];
+                contentSection.innerHTML = nadiContent[tabId] || 'Content not available.';
+                tabs.forEach(t => t.classList.remove('border-b-2', 'border-rose-700', 'text-rose-700'));
+                tab.classList.add('border-b-2', 'border-rose-700', 'text-rose-700');
+            });
+        });
+    </script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <!-- Keep existing scripts -->
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </div>
+</body>
+</html>

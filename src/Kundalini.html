@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kundalini</title>
+    <link href="./output.css" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <header class="absolute inset-x-0 top-0 z-50 bg-red-800">
+       
+
+            <nav class=" border-gray-200">
+                <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                    <a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
+                        <img src="https://res.cloudinary.com/dr8g09icb/image/upload/v1734067555/logo_vualnj.png" class="h-8" alt="Logo" />
+                    </a>
+                    <button data-collapse-toggle="navbar-multi-level" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-multi-level" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                        </svg>
+                    </button>
+                    
+                    <div class="flex items-center md:order-2 space-x-2">
+                        <!-- Search Section -->
+                        <div class="relative hidden md:block mr-4">
+                            <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                                <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                                </svg>
+                                <span class="sr-only">Search icon</span>
+                            </div>
+                            <input type="text" id="search-navbar" class="block w-64 p-2 ps-10 text-sm text-gray-700 border border-gray-300 rounded-lg bg-gray-50 focus:ring-red-500 focus:border-red-500" placeholder="Search...">
+                        </div>
+            
+                        <!-- Language Dropdown -->
+                        <div class="relative">
+                            <button type="button" data-dropdown-toggle="language-dropdown" class="inline-flex items-center font-medium justify-center px-3 py-2 text-sm text-white rounded-lg cursor-pointer hover:bg-white hover:text-black">
+                                <svg class="w-5 h-5 rounded-full me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 3900 3900">
+                                    <path fill="#b22234" d="M0 0h7410v3900H0z"/>
+                                    <path d="M0 450h7410m0 600H0m0 600h7410m0 600H0m0 600h7410m0 600H0" stroke="#fff" stroke-width="300"/>
+                                    <path fill="#3c3b6e" d="M0 0h2964v2100H0z"/>
+                                </svg>
+                                English
+                            </button>
+                            
+                            <!-- Dropdown Menu -->
+                            <div id="language-dropdown" class="z-10 hidden absolute right-0 mt-2 bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
+                                <ul class="py-2 text-sm text-gray-700">
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">
+                                            <div class="inline-flex items-center">
+                                                <svg class="h-3.5 w-3.5 rounded-full me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                    <!-- US Flag SVG -->
+                                                </svg>
+                                                English (US)
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">
+                                            <div class="inline-flex items-center">
+                                                <svg class="h-3.5 w-3.5 rounded-full me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                    <!-- German Flag SVG -->
+                                                </svg>
+                                                Tamil
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="hidden w-full md:block md:w-auto" id="navbar-multi-level">
+                        <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
+                            <li>
+                                <a href="#" class="block py-2 px-3 text-red-700 rounded md:bg-transparent md:text-red-500 md:p-0" aria-current="page">Home</a>
+                            </li>
+                            <li>
+                                <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-white hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 md:w-auto">Resources 
+                                    <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                                    </svg>
+                                </button>
+                                <!-- Dropdown menu -->
+                                <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
+                                    <ul class="py-2 text-sm text-white" aria-labelledby="dropdownLargeButton">
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Speeches</a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Bhajans</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Photos</a>
+                                        </li>
+                                    </ul>
+                                    
+                                </div>
+                            </li>
+                            <li>
+                                <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-white hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 md:w-auto">7 Chakras & 3 Nadis
+                                    <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                                    </svg>
+                                </button>
+                                <!-- Dropdown menu -->
+                                <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
+                                    <ul class="py-2 text-sm text-white" aria-labelledby="dropdownLargeButton">
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Kundalini</a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">The Human Subtle System</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Three Nadis</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Seven Chakras</a>
+                                        </li>
+                                    </ul>
+                                    
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#" class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0">Schedule</a>
+                            </li>
+                            <li>
+                                <a href="#" class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0">Our Centers</a>
+                            </li>
+                            <li>
+                                <a href="#" class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+  
+          
+        
+            <!-- <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+            <div class="flex lg:flex-1">
+              <a href="#" class="-m-1.5 p-1.5">
+                <span class="sr-only">Sahaja Yoga</span>
+                <img class="h-8 w-auto" src="https://res.cloudinary.com/dr8g09icb/image/upload/v1734067555/logo_vualnj.png" alt="">
+              </a>
+            </div>
+            <div class="flex lg:hidden">
+              <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                <span class="sr-only">Open main menu</span>
+                <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+              </button>
+            </div>
+            <div class="hidden lg:flex lg:gap-x-12">
+              <a href="#" class="text-sm/6 font-semibold text-gray-900">Home</a>
+              <a href="#" class="text-sm/6 font-semibold text-gray-900">Schedule</a>
+              <a href="#" class="text-sm/6 font-semibold text-gray-900">Resources</a>
+              <a href="#" class="text-sm/6 font-semibold text-gray-900">Our Center</a>
+              <a href="#" class="text-sm/6 font-semibold text-gray-900">Contact</a>
+             
+            </div>
+            <div class="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center">
+                <form class="mr- max-w-md">   
+                    <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+                    <div class="relative">
+                        <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                            <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                            </svg>
+                        </div>
+                        <input type="search" class="block w-1/2 p-2 ps-10 text-xs text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-red-600 focus:border-red-600"/>
+                         <input type="search" id="default-search" class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-red-600 focus:border-red-600  dark:text-white dark:focus:ring-red-600 dark:focus:border-red-600" placeholder="Search" required /> -->
+                    
+                    <!-- </div>
+                </form>
+            </div>
+            <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+              <a href="#" class="text-sm/6 font-semibold text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a>
+            </div>
+          </nav>  -->
+          
+          
+          <!-- Mobile menu, show/hide based on menu open state. -->
+          <!-- <div class="lg:hidden" role="dialog" aria-modal="true"> -->
+            <!-- Background backdrop, show/hide based on slide-over state. -->
+            <!-- <div class="fixed inset-0 z-50"></div>
+            <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+              <div class="flex items-center justify-between">
+                <a href="#" class="-m-1.5 p-1.5">
+                  <span class="sr-only">Your Company</span>
+                  <img class="h-8 w-auto" src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600" alt="">
+                </a>
+                <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+                  <span class="sr-only">Close menu</span>
+                  <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+              <div class="mt-6 flow-root">
+                <div class="-my-6 divide-y divide-gray-500/10">
+                  <div class="space-y-2 py-6">
+                    <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Product</a>
+                    <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Features</a>
+                    <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Marketplace</a>
+                    <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Company</a>
+                  </div>
+                  <div class="py-6">
+                    <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Log in</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+        </header>
+    </nav>
+    <!-- Body Section -->
+    <section class="mt-10 max-w-6xl mx-auto px-4 lg:px-0 py-12">
+        <!-- Heading -->
+        <div class="text-center mb-8">
+          <h1 class="text-4xl md:text-5xl font-light text-red-600 mb-2">
+            Kundalini Awakening Meditation By Sahaja Yoga
+          </h1>
+          <h2 class="text-lg md:text-2xl font-normal text-red-400">
+            Pure Desire Of The God Almighty With Us
+          </h2>
+        </div>
+  
+        <!-- Content Section -->
+        <div
+          class="flex flex-col lg:flex-row items-center justify-center lg:space-x-8 space-y-6 lg:space-y-0"
+        >
+          <!-- Image -->
+          <div class="w-full lg:w-1/2 flex justify-center">
+            <img
+              src="https://www.sahajayoga.org.in/images/kundalini.png"
+              alt="Kundalini Diagram"
+              class="w-full h-auto max-w-md"
+            />
+          </div>
+  
+          <!-- Paragraph Content -->
+          <div class="w-full lg:w-1/2 text-gray-700 leading-relaxed text-md text-justify">
+            <p class="mb-4">
+              Kundalini is the power of pure desire within us, a motherly and
+              soothing spiritual energy which lies dormant at the base of the
+              spine in the sacrum bone (the ancient civilizations knew that in
+              this bone resides a sacred energy).
+            </p>
+            <p class="mb-4">
+              Self realisation is the awakening of the Kundalini through the
+              central channel, piercing through the six chakras above the sacrum
+              bone and emerging at the top of the head (fontanel bone area) as a
+              gentle "fountain" of coolness.
+            </p>
+            <p class="mb-4">
+              The word fontanel itself means "little fountain" which shows again
+              the ancient knowledge about this phenomenon of Self realisation.
+            </p>
+            <p>
+              Self realisation has always been the ultimate goal of all religions
+              and spiritual traditions of the world, but was extremely difficult
+              to attain in the past. It has now become a mass phenomenon achieved
+              effortlessly through Sahaja Yoga, which is Shri Mataji's invaluable
+              gift to humanity.
+            </p>
+          </div>
+        </div>
+        <br>
+        <div class="w-full  text-gray-700 leading-relaxed text-md text-justify">
+            <p class="mb-4">
+                In Shri Mataji's own words, "Self realisation is the first encounter with Reality". "We have the Mother within ourselves, in our hearts, and if She is awakened, She is going to look after us. She is going to give all the protection that is needed. And there is nothing to be frightened of."
+
+            </p>
+            <p class="mb-4">
+              "Kundalini cures you, she improves you, she bestows all the blissful things upon you. She takes you away from the worries at the grosser level", says -H.H. Shri Mataji Nirmala Devi.
+            </p>
+            <p class="mb-4">
+              The word fontanel itself means "little fountain" which shows again
+              the ancient knowledge about this phenomenon of Self realisation.
+            </p>
+            <p>
+                The Kundalini is like a rope with a thousand strands; when we first get our Self-realisation, only one or two strands find their way through the chakras and reach the sahastrara (the top chakra). However, with regular meditation, gradually more strands of the Kundalini rise and connects us to the divine power. The experience of meditation becomes more profound and blissful over time. The Kundalini was described by Indian saints such as Adi Shankaracharya (c 600 a.d.), Kabir (c 1500 a.d.) and Jnanadeva (c 1200 a.d.) among others.
+            </p>
+            <br>
+            <h1 class="text-red-600 text-lg">References to Kundalini</h1>
+            <br>
+            <p class="mb-4">The Kundalini is like a rope with a thousand strands; when we first get our Self-realisation, only one or two strands find their way through the chakras and reach the sahastrara (the top chakra). However, with regular meditation, gradually more strands of the Kundalini rise and connects us to the divine power. The experience of meditation becomes more profound and blissful over time. The Kundalini was described by Indian saints such as Adi Shankaracharya (c 600 a.d.), Kabir (c 1500 a.d.) and Jnanadeva (c 1200 a.d.) amongst others.
+            </p>
+            <p class="mb-4">This movement of Kundalini is felt by the presence of a cool or, in the case of imbalance, a warm breeze across the palms of hands or the soles of feet. Such a phenomenon can be seen to be described in a diverse array of scripture like:-</p>
+            <ul class="list-disc">
+                <li>Aquarian Gospel of Christ, ch. 44, v19, ch. 161, v35, ch. 162, v4;</li>
+                <li>Gyaneshwari, ch.6;</li>
+                <li>Ezekiel, ch. 37, vs. 5-6:</li>
+                <li>Old Testament; John, ch. 14 vs. 15- 17 & 25: New Testament;</li>
+                <li>Quran, sura 24, vs. 24; sura 35, vs. 9; sura 36, vs. 64;</li>
+                <li>Descieux, 1998iii</li>
+            </ul>
+          </div>
+        </section>
+</body>
+</html>
